@@ -38,23 +38,15 @@ body.lock {
 }
 
 .btn-more {
-  display: flex;
-  align-items: center;
-  height: 60px;
-  padding: 0 50px;
+  display: block;
+  padding: 20px 50px;
   font-size: 20px;
   font-family: "HelveticaNeueLTStd-Lt";
   color: rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);
   text-transform: uppercase;
-  line-height: 0;
+  line-height: 1;
   text-align: center;
   outline: none;
   border: none;
-}
-
-input, button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
