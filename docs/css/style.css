@@ -521,7 +521,10 @@ body.lock {
 }
 
 .btn-more {
-    display: inline-block;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
     height: 60px;
     padding: 0 50px;
     font-size: 20px;
@@ -597,10 +600,17 @@ body.lock {
     font-size: 30px;
     text-decoration: none;
     transition: color 0.3s linear;
+    white-space: nowrap;
 }
 
 .nav-panel__info-text a:hover {
     color: #fd926d;
+}
+
+@media (min-width: 408px) {
+    .nav-panel__info-text a {
+        white-space: normal;
+    }
 }
 
 @media (min-width: 768px) {
@@ -1215,6 +1225,12 @@ body.lock {
     z-index: 10;
     overflow: scroll;
     transition: left 1s linear;
+}
+
+@media (min-width: 408px) {
+    .navigation__sidebar {
+        top: 742px;
+    }
 }
 
 @media (min-width: 650px) {
@@ -2393,6 +2409,7 @@ body.lock {
     position: absolute;
     bottom: 0;
     left: 0;
+    padding-top: 2px;
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -2488,8 +2505,8 @@ body.lock {
 
 .shop__card-btn {
     position: relative;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-align: center;
@@ -2511,7 +2528,7 @@ body.lock {
 .shop__card-btn::after {
     position: absolute;
     content: "";
-    bottom: -3px;
+    bottom: 0px;
     left: 0;
     width: 100%;
     height: 3px;
