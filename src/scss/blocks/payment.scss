@@ -1,0 +1,23 @@
+.payment {
+    display: none;
+    padding: 20px 0;
+    background-color: #f7f7f7;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+}
+
+.payment-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment__title {
+    margin-right: 15px;
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgba(65, 65, 65, 0.502);
+    line-height: 1.2;
+}

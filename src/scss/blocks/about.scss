@@ -1,0 +1,30 @@
+.about {
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+}
+
+.about-wrap {
+
+}
+
+.about__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: "Arial";
+    color: rgb(65, 65, 65);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.about__text {
+    font-size: 14px;
+    font-family: "Arial";
+    color: rgb(153, 153, 153);
+    line-height: 1.286;
+    text-align: center;
+}

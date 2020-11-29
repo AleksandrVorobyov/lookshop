@@ -1,0 +1,230 @@
+.social {
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    height: 55px;
+    max-height: 55px;
+    background-color: #ededed;
+  }
+}
+
+.social-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+#social-form .social__text {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90px;
+
+  @media (min-width: 768px) {
+    width: auto;
+    height: auto;
+  }
+}
+
+.social__item + .social__item {
+  margin-top: 15px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.social__text {
+  display: none;
+  margin-right: 10px;
+  font-size: 26px;
+  font-weight: 400;
+  font-family: "Arial";
+  color: rgb(108, 108, 108);
+  line-height: 1;
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 450px) {
+    display: block;
+  }
+}
+
+.social__input {
+  padding: 0 10px;
+  height: 90px;
+  width: 100%;
+  background-color: #ededed;
+  border: none;
+  outline: none;
+
+  font-size: 30px;
+  font-family: "Arial";
+  color: rgb(159, 159, 159);
+  font-style: italic;
+  line-height: 1;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    background-color: #fff;
+    height: 28px;
+    width: 160px;
+    font-size: 12px;
+  }
+}
+
+.social__input::placeholder {
+  font-size: 30px;
+  font-family: "Arial";
+  color: rgb(159, 159, 159);
+  font-style: italic;
+  line-height: 1;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.social__button {
+  position: relative;
+  height: 90px;
+  min-width: 90px;
+  background-color: $peach;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: $linear;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: $peach-dark;
+    transition: $linear;
+    z-index: 3;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: $green;
+    z-index: -1;
+    transition: $linear;
+  }
+
+  @media (min-width: 768px) {
+    height: 28px;
+    min-width: 28px;
+
+    &::after {
+      bottom: -1px;
+      height: 3px;
+    }
+  }
+}
+
+.social__button:hover::before {
+  width: 100%;
+}
+
+.social__button span {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 10px;
+    background-color: $white;
+    z-index: 5;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 35px;
+    background-color: $white;
+    z-index: 5;
+  }
+
+  @media (min-width: 768px) {
+    &::after {
+      width: 11px;
+      height: 3px;
+    }
+
+    &::before {
+      width: 3px;
+      height: 11px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .social__button:hover span::after {
+    width: 13px;
+  }
+
+  .social__button:hover span::before {
+    height: 13px;
+  }
+}
+
+.social__icon {
+  width: 90px;
+  height: 90px;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #6b6b6b;
+  font-size: 34px;
+  transition: $linear;
+
+  &:hover {
+    color: $peach;
+  }
+
+  @media (min-width: 768px) {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+}
+
+.social__icon--grey {
+  background-color: transparent;
+}

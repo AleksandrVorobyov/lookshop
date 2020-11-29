@@ -1,0 +1,140 @@
+.sale {
+  position: relative;
+  width: 100%;
+  padding: 15px 0 30px;
+}
+
+.sale-wrapper {
+  position: relative;
+}
+
+.sale-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 78px;
+  left: 0%;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(178, 178, 178);
+  opacity: 0.5;
+  z-index: -2;
+}
+
+.sale__title-wrap {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 157px;
+  height: 157px;
+  background: url("../images/sale/big.svg") no-repeat;
+  margin-bottom: 30px;
+}
+
+.sale__title-wrap::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -6px;
+  width: 170px;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.sale__title-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144px;
+  height: 144px;
+  background: url("../images/sale/mini.svg") no-repeat;
+}
+
+.sale__title-item-border {
+  text-align: center;
+}
+
+.sale__title {
+  font-size: 36px;
+  font-family: "aempirial";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+.sale__title-sum {
+  font-size: 72px;
+  font-family: "aempirial";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+.sale__title-min {
+  display: inline-block;
+  font-size: 32px;
+  font-family: "aempirial";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+.sale__cards-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .shop__card:last-child {
+    display: none;
+  }
+
+  .shop__card:nth-child(3) {
+    display: none;
+  }
+
+  .shop__card + .shop__card {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 650px) {
+    flex-direction: row;
+
+    .shop__card + .shop__card {
+      margin-left: 30px;
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+
+    .shop__card:nth-child(3) {
+      display: block;
+    }
+
+    .shop__card + .shop__card {
+      margin-left: 0px;
+    }
+  }
+  @media (min-width: 1000px) {
+    .shop__card:last-child {
+      display: block;
+    }
+  }
+}
+
+.sale__btn-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
