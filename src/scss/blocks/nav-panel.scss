@@ -48,9 +48,14 @@
   font-size: 30px;
   text-decoration: none;
   transition: color 0.3s linear;
+  white-space: nowrap;
 
   &:hover {
     color: #fd926d;
+  }
+
+  @media (min-width: 408px) {
+    white-space: normal;
   }
 
   @media (min-width: 768px) {

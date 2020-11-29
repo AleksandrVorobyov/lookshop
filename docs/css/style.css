@@ -529,7 +529,7 @@ body.lock {
     color: white;
     background-color: black;
     text-transform: uppercase;
-    line-height: 1.5;
+    line-height: 1;
     text-align: center;
     outline: none;
     border: none;
@@ -1207,14 +1207,21 @@ body.lock {
 .navigation__sidebar {
     position: absolute;
     padding: 15px 15px;
-    top: 587px;
+    top: 772px;
     left: 0;
     width: 100%;
-    height: calc(100% - 587px);
+    height: 100%;
     background-color: #fd926d;
     z-index: 10;
     overflow: scroll;
     transition: left 1s linear;
+}
+
+@media (min-width: 650px) {
+    .navigation__sidebar {
+        top: 587px;
+        height: calc(100% - 587px);
+    }
 }
 
 @media (min-width: 768px) {
@@ -2481,14 +2488,20 @@ body.lock {
 
 .shop__card-btn {
     position: relative;
-    display: inline-block;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 100%;
+    height: 67px;
     font-size: 20px;
     font-family: "HelveticaNeueLTStd-Lt";
     color: white;
     text-transform: uppercase;
     line-height: 1;
-    padding: 10px;
+    padding-left: 10px;
     padding-right: 32px;
     background-color: #fd926d;
     text-decoration: none;
@@ -2519,6 +2532,7 @@ body.lock {
 
 @media (min-width: 768px) {
     .shop__card-btn {
+        height: 32px;
         font-size: 12px;
         width: auto;
     }

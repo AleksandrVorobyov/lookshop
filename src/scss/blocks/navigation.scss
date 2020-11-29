@@ -376,6 +376,10 @@
   overflow: scroll;
   transition: left 1s linear;
 
+  @media (min-width: 408px) {
+    top: 742px;
+  }
+
   @media (min-width: 650px) {
     top: 587px;
     height: calc(100% - 587px);
