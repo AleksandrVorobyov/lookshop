@@ -52,3 +52,9 @@ body.lock {
   outline: none;
   border: none;
 }
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
