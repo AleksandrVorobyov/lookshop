@@ -1,0 +1,41 @@
+.navigation__mega-menu {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 15px;
+    background-color: $white;
+    opacity: 0;
+    transform: rotateX(-90deg);
+}
+
+.mega-menu-column {
+    border-left: 1px solid $peach;
+    border-right: 1px solid $peach;
+}
+
+.mega-menu-column + .mega-menu-column {
+    margin-left: 15px;
+}
+
+.mega-menu__table-item a {
+    display: inline-block;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    background-color: #fff;
+    color: black;
+    line-height: 1;
+    text-decoration: none;
+    transition: $linear;
+
+    &:hover {
+        background-color: $green;
+        color: $white;
+    }
+}
+
+.mega-menu__table-item + .mega-menu__table-item {
+    margin-top: 15px;
+}

@@ -12,4 +12,25 @@ sidebarBtn.addEventListener('click', function() {
         this.classList.add('navigation__mobile-burger--active');
         body.style.overflow = 'hidden';
     }
-})
+});
+
+window.onload = function () {
+    //ищем элемент по селектору
+    let megaLink = document.querySelector('#showNew');
+    let megaLinkItem = document.getElementById('showNewItem');
+    //вешаем на него события
+    megaLink.onmouseout = function(e) {
+        megaLinkItem.style.opacity='0';
+        megaLinkItem.style.transform='rotateX(-90deg)';
+    }
+  
+    megaLink.onmouseover = function(e) {
+        megaLinkItem.style.opacity='1';
+        megaLinkItem.style.transform='rotateX(0deg)';
+    };
+
+    megaLinkItem.onmouseover = function(e) { 
+        megaLinkItem.style.opacity='1';
+        megaLinkItem.style.transform='rotateX(0deg)';
+    }
+  };

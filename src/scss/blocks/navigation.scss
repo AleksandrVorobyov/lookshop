@@ -1,4 +1,5 @@
 .navigation {
+  position: relative;
   background-color: $white;
   z-index: 100;
 }
@@ -58,8 +59,9 @@
 }
 
 .navigation__links {
-  margin-right: 35px;
+  position: relative;
   display: none;
+  margin-right: 20px;
 
   @media (min-width: 1000px) {
     display: flex;
@@ -68,6 +70,7 @@
 
 .navigation__link {
   position: relative;
+  padding: 44px 25px 45px;
   display: inline-block;
   font-size: 16px;
   color: rgb(0, 0, 0);
@@ -83,7 +86,7 @@
     position: absolute;
     content: "";
     top: 50%;
-    right: -15px;
+    right: 0px;
     border-top: 5px solid rgb(0, 0, 0);
     border-bottom: 5px solid transparent;
     border-right: 5px solid transparent;
@@ -94,10 +97,6 @@
 .navigation__link:hover::after {
   border-top: 5px solid $peach;
   transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
-}
-
-.navigation__link + .navigation__link {
-  margin-left: 45px;
 }
 
 .navigation__cart {
@@ -367,61 +366,5 @@
   }
 }
 
-.navigation__sidebar {
-  position: absolute;
-  padding: 15px 15px;
-  top: 772px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $peach;
-  z-index: 10;
-  overflow: scroll;
-  transition: left 1s linear;
 
-  @media (min-width: 408px) {
-    top: 742px;
-  }
-
-  @media (min-width: 650px) {
-    top: 587px;
-    height: calc(100% - 587px);
-  }
-
-  @media (min-width: 768px) {
-    top: 200px;
-    height: calc(100% - 200px);
-    width: 40%;
-  }
-}
-
-.navigation__sidebar-col {
-  li {
-  }
-}
-.navigation__sidebar-link {
-  display: inline-block;
-  padding: 15px 20px;
-  width: 100%;
-  font-size: 18px;
-  font-family: "Arial";
-  color: white;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: left;
-  text-decoration: none;
-  transition: $linear;
-
-  &:hover {
-    background-color: $green;
-  }
-}
-
-.navigation__sidebar--hidden {
-  left: -100%;
-
-  @media (min-width: 768px) {
-    left: -40%;
-  }
-}
 
