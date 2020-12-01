@@ -18,10 +18,18 @@ body.lock {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   max-width: 760px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 5px;
+
+  @media (min-width: 340px) {
+    padding: 0 15px;
+  }
 
   @media (min-width: 1000px) {
     max-width: 1000px;
@@ -49,4 +57,8 @@ body.lock {
   text-align: center;
   outline: none;
   border: none;
+}
+
+input, button, a {
+  -webkit-appearance: none !important;
 }

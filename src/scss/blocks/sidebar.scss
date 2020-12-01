@@ -1,7 +1,6 @@
 .navigation__sidebar {
   position: absolute;
   padding: 15px 15px;
-  top: 772px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -10,18 +9,8 @@
   overflow: scroll;
   transition: left 1s linear;
 
-  @media (min-width: 650px) {
-    top: 587px;
-  }
-
   @media (min-width: 768px) {
-    top: 200px;
     width: 40%;
-  }
-}
-
-.navigation__sidebar-col {
-  li {
   }
 }
 
