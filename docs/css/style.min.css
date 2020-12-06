@@ -566,6 +566,7 @@ input, button, a {
   align-items: center;
   justify-content: center;
   margin: 0;
+  width: 100%;
   font-size: 30px;
   padding: 0 15px;
   font-family: "Arial";
@@ -585,7 +586,8 @@ input, button, a {
   @media (min-width: 650px) {
     .nav-panel__btn {
       border-left: 1px solid #444444;
-      border-right: 1px solid #444444; }
+      border-right: 1px solid #444444;
+      width: auto; }
       .nav-panel__btn:nth-child(2) {
         border: none; } }
   @media (min-width: 768px) {
@@ -598,7 +600,7 @@ input, button, a {
         border-right: 1px solid #444444; } }
 
 .nav-panel__btn--currency {
-  padding-right: 60px;
+  padding-right: 30px;
   padding-left: 30px; }
   .nav-panel__btn--currency::after {
     position: absolute;
@@ -611,13 +613,15 @@ input, button, a {
     border-left: 10px solid transparent;
     transform: translate(-50%, -25%); }
   @media (min-width: 650px) {
-    .nav-panel__btn--currency::after {
-      right: 21px;
-      transform: translate(0, -25%); } }
+    .nav-panel__btn--currency {
+      padding-right: 60px; }
+      .nav-panel__btn--currency::after {
+        right: 21px;
+        transform: translate(0, -25%); } }
   @media (min-width: 768px) {
     .nav-panel__btn--currency {
       padding-right: 30px;
-      padding-left: 11px; }
+      padding-left: 15px; }
       .nav-panel__btn--currency::after {
         right: 12px;
         border-top: 5px solid #fff;
@@ -627,12 +631,14 @@ input, button, a {
 
 .nav-panel__btn--profile {
   width: 100%;
-  justify-content: center; }
+  justify-content: center;
+  border: none; }
   .nav-panel__btn--profile i {
     margin-right: 10px; }
   @media (min-width: 768px) {
     .nav-panel__btn--profile {
-      width: auto; } }
+      width: auto;
+      border: none !important; } }
 
 .nav-panel__btn--profile svg {
   margin-right: 10px; }
@@ -642,6 +648,35 @@ input, button, a {
   @media (min-width: 768px) {
     .nav-panel__btn--search {
       padding: 0 11px; } }
+
+.nav-panel__btn-currency {
+  position: relative; }
+
+.nav-panel__btn-profile {
+  width: 100%; }
+
+.btn-currency__dropdown {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 200;
+  transform-style: preserve-3d;
+  transform: rotateX(-90deg) translateY(-90px);
+  opacity: 0;
+  transition: all 0.4s linear; }
+
+.btn-currency__dropdown--active {
+  opacity: 1;
+  transform: none; }
+
+.btn-currency__dropdown .nav-panel__btn {
+  border: none;
+  border-top: 1px solid #444444;
+  width: 100%; }
+  @media (min-width: 650px) {
+    .btn-currency__dropdown .nav-panel__btn {
+      justify-content: flex-start; } }
 
 .navigation {
   position: relative;
@@ -692,6 +727,10 @@ input, button, a {
     .navigation__content {
       width: auto; } }
 
+.navigation__link-wrap:hover .navigation__link::before {
+  opacity: 1;
+  transition: all .4s linear .2s; }
+
 .navigation__links {
   position: relative;
   display: none;
@@ -720,6 +759,16 @@ input, button, a {
     border-bottom: 5px solid transparent;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent; }
+  .navigation__link::before {
+    position: absolute;
+    content: "";
+    bottom: -25px;
+    left: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    transform: rotate(45deg) translateX(-50%);
+    opacity: 0; }
 
 .navigation__link:hover::after {
   border-top: 5px solid #fd926d;
@@ -979,7 +1028,8 @@ input, button, a {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("../images/profile/01.jpg") top left/cover no-repeat;
+  background-blend-mode: multiply;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.3) 10%, rgba(253, 146, 109, 0.7) 80%), url("../images/profile/01.jpg") top left/cover no-repeat;
   z-index: 1000;
   transition: top 1s linear;
   display: flex;
@@ -1110,10 +1160,20 @@ input, button, a {
   position: absolute;
   width: 100%;
   left: 0;
+  margin-top: 10px;
   padding: 15px;
   background-color: #fff;
   opacity: 0;
-  transform: rotateX(-90deg); }
+  transform: rotateX(-75deg);
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s; }
+  .navigation__mega-menu::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 0;
+    height: 10px;
+    width: 100%; }
 
 .mega-menu-column {
   border-left: 1px solid #fd926d;

@@ -544,6 +544,10 @@ body.lock {
     border: none;
 }
 
+input, button, a {
+    -webkit-appearance: none !important;
+}
+
 .nav-panel {
     background-color: black;
 }
@@ -1270,27 +1274,31 @@ body.lock {
 
 .prifile {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     height: 100%;
     width: 100%;
     background: url("../images/profile/01.jpg") top left/cover no-repeat;
     z-index: 1000;
+    transition: top 1s linear;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .prifile-form {
-    position: fixed;
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     padding: 15px;
     background-color: black;
-    border: 3px solid #fd926d;
+    border: 5px solid #fd926d;
+    border-radius: 15px;
 }
 
 .profile__title {
@@ -1379,6 +1387,25 @@ body.lock {
     outline: none;
     border: none;
     background-color: #ffffff;
+    font-size: 20px;
+    font-family: "Arial";
+    color: #000000;
+    font-style: italic;
+    line-height: 1;
+    z-index: 2;
+}
+
+.profile__btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: #4fafa0;
+    border-radius: 0px 5px 5px 0;
+    transition: all 0.4s linear;
+    z-index: -1;
 }
 
 .profile__btn::after {
@@ -1389,10 +1416,56 @@ body.lock {
     height: 100%;
     width: 0;
     background-color: #4fafa0;
+    border-radius: 5px 0px 0px 5px;
+    transition: all 0.4s linear;
+    z-index: -1;
 }
 
-.profile__btn .profile__btn:hover::after {
-    width: 100%;
+.profile__btn:hover::after {
+    width: 50%;
+}
+
+.profile__btn:hover::before {
+    width: 50%;
+}
+
+.profile__exit {
+    border: none;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+.profile__exit::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 20px;
+    height: 25px;
+    width: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.4s linear;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.profile__exit::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 20px;
+    height: 25px;
+    width: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.4s linear;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.profile__exit:hover::before, .profile__exit:hover::after {
+    background-color: #fd926d;
 }
 
 .navigation__mega-menu {

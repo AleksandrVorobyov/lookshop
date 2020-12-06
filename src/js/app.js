@@ -36,24 +36,20 @@ const moreBtnMobile = document.querySelector('#mobile-more-btn');
 const allMobileShopCard = document.querySelector('.shop-mobile__cards');
 const MobileShopCard = allMobileShopCard.querySelectorAll('.shop__card');
 
-moreBtnMobile.addEventListener('click', function(item) {
+moreBtnMobile.addEventListener('click', function() {
     MobileShopCard.forEach(function(item) {
         item.classList.remove('hidden');
     })
-
-    // item.scrollByPages(-1);
 })
 
 const moreBtnSale = document.querySelector('#sale-btn-more');
 const allSaleShopCard = document.querySelector('.sale__cards-wrap');
 const SaleShopCard = allSaleShopCard.querySelectorAll('.shop__card');
 
-moreBtnSale.addEventListener('click', function(item) {
+moreBtnSale.addEventListener('click', function() {
     SaleShopCard.forEach(function(item) {
         item.style.display='block';
     })
-
-    // item.scrollByPages(-1);
 })
 
 const profileBtn = document.querySelector('#nav-panel-profile');
@@ -69,3 +65,23 @@ profileExit.addEventListener('click', function() {
     profile.style.top='-100%';
     body.style.overflow = 'scroll';
 })
+
+const moneyDropdownBtn = document.getElementById('nav-panel-currency');
+const moneyDropdownBtnWrap = document.querySelector('.btn-currency__dropdown');
+const moneyDropdownBtnItem = document.querySelectorAll('.nav-panel__btn--currency-item');
+
+moneyDropdownBtn.addEventListener('click', function() {
+    moneyDropdownBtnWrap.classList.toggle('btn-currency__dropdown--active');
+})
+
+moneyDropdownBtnItem.forEach(function(item) {
+    item.addEventListener('click', function() {
+        let dropdownItemText = moneyDropdownBtn.innerHTML;
+        moneyDropdownBtn.innerHTML = this.innerHTML;
+        this.innerHTML = dropdownItemText;
+        if (moneyDropdownBtnWrap.classList.contains('btn-currency__dropdown--active')) {
+            moneyDropdownBtnWrap.classList.remove('btn-currency__dropdown--active');
+        }
+    })
+})
+

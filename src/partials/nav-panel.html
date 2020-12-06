@@ -4,11 +4,21 @@
             <p class="nav-panel__info-text">custom care: <a href="tel:888-23-4567">888-23-4567</a></p>
         </div>
         <div class="nav-panel__buttons">
-            <button id="nav-panel-currency" class="nav-panel__btn nav-panel__btn--currency">$&nbsp;US</button>
-            <button id="nav-panel-profile" class="nav-panel__btn nav-panel__btn--profile">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                my account</button>
-            <button id="nav-panel-search" class="nav-panel__btn nav-panel__btn--search"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <div class="nav-panel__btn-currency">
+                <button type="button" data-select-title id="nav-panel-currency" class="nav-panel__btn nav-panel__btn--currency">$&nbsp;US</button>
+                <div class="btn-currency__dropdown">
+                    <button type="button" data-select-item="€ eu" class="nav-panel__btn nav-panel__btn--currency-item">€&nbsp;eu</button>
+                    <button type="button" data-select-item="₽ ru" class="nav-panel__btn nav-panel__btn--currency-item">₽&nbsp;ru</button>
+                </div>
+            </div>
+            <div class="nav-panel__btn-profile">
+                <button id="nav-panel-profile" class="nav-panel__btn nav-panel__btn--profile">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    my account</button>
+            </div>
+            <div class="nav-panel__btn-search">
+                <button id="nav-panel-search" class="nav-panel__btn nav-panel__btn--search"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
         </div>
     </div>
 </section>

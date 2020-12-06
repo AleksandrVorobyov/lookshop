@@ -27,14 +27,25 @@
                         <p class="nav-panel__info-text">custom care: <a href="tel:888-23-4567">888-23-4567</a></p>
                     </div>
                     <div class="nav-panel__buttons">
-                        <button id="nav-panel-currency" class="nav-panel__btn nav-panel__btn--currency">$&nbsp;US</button>
-                        <button id="nav-panel-profile" class="nav-panel__btn nav-panel__btn--profile">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            my account</button>
-                        <button id="nav-panel-search" class="nav-panel__btn nav-panel__btn--search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <div class="nav-panel__btn-currency">
+                            <button type="button" data-select-title id="nav-panel-currency" class="nav-panel__btn nav-panel__btn--currency">$&nbsp;US</button>
+                            <div class="btn-currency__dropdown">
+                                <button type="button" data-select-item="€ eu" class="nav-panel__btn nav-panel__btn--currency-item">€&nbsp;eu</button>
+                                <button type="button" data-select-item="₽ ru" class="nav-panel__btn nav-panel__btn--currency-item">₽&nbsp;ru</button>
+                            </div>
+                        </div>
+                        <div class="nav-panel__btn-profile">
+                            <button id="nav-panel-profile" class="nav-panel__btn nav-panel__btn--profile">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                my account</button>
+                        </div>
+                        <div class="nav-panel__btn-search">
+                            <button id="nav-panel-search" class="nav-panel__btn nav-panel__btn--search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
                     </div>
                 </div>
-            </section>            <section class="navigation">
+            </section>
+            <section class="navigation">
                 <div class="container navigation__wrapper">
                     <div class="navigation__logo">
                         <a href="#">
@@ -370,10 +381,10 @@
             </section>            <section class="prifile">
                 <form class="prifile-form">
                     <h2 class="profile__title">Welcome:</h2>
-                    <input type="text" class="profile__input" placeholder="enter your username">
-                    <input type="password" class="profile__input" placeholder="enter your password">
+                    <input type="email" class="profile__input" placeholder="enter your email" required>
+                    <input type="password" class="profile__input" placeholder="enter your password" required>
                     <div class="profile__btn-row">
-                        <button type="submit" class="profile__btn">Submit</button>
+                        <button id="profile-btn-submit" type="submit" class="profile__btn">Submit</button>
                         <button type="reset" class="profile__btn">Reset</button>
                     </div>
                     <button type="button" class="profile__exit"></button>
@@ -1046,6 +1057,7 @@
                     </div>
                 </div>
             </section>        </footer>
+
     </div>
 
     <script src="libs/owl-carousel/jQuery-3-5-1.js"></script>
