@@ -8,9 +8,10 @@
     padding: 15px;
     background-color: $white;
     opacity: 0;
-    transform: rotateX(-75deg);
+    transform: translateY(-140px) rotateX(-75deg);
     transform-style: preserve-3d;
     -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    z-index: -100;
 
     &::before {
         position: absolute;

@@ -22,12 +22,14 @@ window.onload = function () {
         let megaLinkItem = item.querySelector('.navigation__mega-menu');
         item.onmouseout = function() {
             megaLinkItem.style.opacity='0';
-            megaLinkItem.style.transform='rotateX(-90deg)';
+            megaLinkItem.style.zIndex='-100';
+            megaLinkItem.style.transform='translateY(-140px) rotateX(-90deg)';
         }
     
         item.onmouseover = function() {
             megaLinkItem.style.opacity='1';
-            megaLinkItem.style.transform='rotateX(0deg)';
+            megaLinkItem.style.zIndex='1000';
+            megaLinkItem.style.transform='translateY(0px) rotateX(0deg)';
         };
     })
 };

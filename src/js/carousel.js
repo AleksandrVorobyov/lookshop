@@ -105,3 +105,7 @@ $(document).ready(function(){
     });
   });
 
+  JGallery.create(albums,{
+    "canMinimizeThumbnails": false,
+    "canChangePreviewSize": true
+});

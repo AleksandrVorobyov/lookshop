@@ -1,0 +1,76 @@
+<section class="product">
+    <div class="container">
+        <div class="product-wrap">
+            <div class="product-row">
+                <div class="product__gallery">
+                    <div id="gallery"></div>
+                </div>
+                <div class="product__info">
+                    <div class="product__info-block-link"><a href="#">Back to <span>Women’s Clothing</span></a></div>
+                    <div class="product__info-block-desc">
+                        <h2 class="product__info-desc-title">Sofi Blouse</h2>
+                        <div class="product__info-desc-row">
+                            <p class="product__info-desc-price">$98.95</p>
+                            <p class="product__info-desc-rewies"><a href="#">12 reviews</a><span></span></p>
+                        </div>
+                        <article class="product__info-desc-text">
+                            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                        </article>
+                    </div>
+                    <div class="product__info-block-drop">
+                        <div class="product__info-drop-col">
+                            <p class="product__info-drop-text">Select size</p>
+                            <button class="product__info-drop-btn"></button>
+                        </div>
+                        <div class="product__info-drop-col">
+                            <button class="product__info-drop-color change-color-1"></button>
+                            <button class="product__info-drop-color change-color-2"></button>
+                            <button class="product__info-drop-color change-color-3"></button>
+                            <button class="product__info-drop-color change-color-4"></button>
+                            <button class="product__info-drop-color change-color-5"></button>
+                        </div>
+                    </div>
+                    <div class="product__info-block-btn">
+                        <div class="product__info-btn-row">
+                            <button class="product__info-btn-item">-</button>
+                            <button class="product__info-btn-item product__info-btn-item--text">1</button>
+                            <button class="product__info-btn-item">+</button>
+                        </div>
+                        <a href="#" class="product__info-btn-link">add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-row"></div>
+            <div class="product-row"></div>
+        </div>
+    </div>
+    <script></script>
+    <script type="text/javascript">
+        document.querySelector('#gallery').appendChild(JGallery.create([{
+            title: 'Images',
+            items: [
+                {
+                    url: 'images/large/01.jpg',
+                    thumbUrl: 'images/thumbs/01.jpg',
+                    hash: 'photo-1'
+                },
+                {
+                    url: 'images/large/02.jpg',
+                    thumbUrl: 'images/thumbs/02.jpg',
+                    hash: 'photo-2'
+                },
+                {
+                    url: 'images/large/03.jpg',
+                    thumbUrl: 'images/thumbs/03.jpg',
+                    hash: 'photo-3'
+                },
+                {
+                    url: 'images/large/04.jpg',
+                    thumbUrl: 'images/thumbs/04.jpg',
+                    hash: 'photo-4'
+                }
+            ]
+        }]).getElement());
+    </script>
+</section>
+

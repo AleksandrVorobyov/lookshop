@@ -136,6 +136,12 @@
     .shop__card + .shop__card {
       margin-left: 0px;
     }
+
+    .shop__card {
+      &:nth-child(n + 3) {
+        margin-top: 0px;
+      }
+    }
   }
   @media (min-width: 1000px) {
     .shop__card:last-child {

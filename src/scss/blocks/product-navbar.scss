@@ -1,0 +1,24 @@
+.product-navbar {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.product-navbar-wrap {
+  display: flex;
+  padding: 10px 0;
+  border-top: 1px solid rgba(214, 214, 214, 0.5);
+  border-bottom: 1px solid rgba(214, 214, 214, 0.5);
+}
+
+.product-navbar__item span,
+.product-navbar__item .product-navbar__link {
+  font-size: 11px;
+  font-family: "Arial";
+  color: rgb(122, 112, 109);
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.product-navbar__item span {
+  margin: 0 5px;
+}
