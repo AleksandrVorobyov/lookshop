@@ -464,7 +464,7 @@ body.lock {
 
 .btn-more {
   display: block;
-  padding: 20px 50px;
+  padding: 22px 50px 20px;
   font-size: 20px;
   font-family: "HelveticaNeueLTStd-Lt";
   color: white;
@@ -477,6 +477,25 @@ body.lock {
 
 input, button, a {
   -webkit-appearance: none !important; }
+
+header {
+  position: sticky;
+  z-index: 200;
+  min-height: 200px; }
+  @media (min-width: 1000px) {
+    header {
+      min-height: 135px; } }
+
+.header-wrapper {
+  position: relative; }
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: show-header 1s linear;
+  box-shadow: 0 0 2px 1px #666666; }
 
 .nav-panel {
   background-color: black; }
@@ -878,7 +897,7 @@ input, button, a {
 
 .navigation__mobile {
   position: relative;
-  margin-bottom: 15px; }
+  padding-bottom: 15px; }
   @media (min-width: 1000px) {
     .navigation__mobile {
       display: none; } }
@@ -1336,7 +1355,8 @@ input, button, a {
   text-align: center;
   background-color: #ffa687;
   z-index: 1;
-  transition: all 0.4s linear; }
+  transition: all 0.4s linear;
+  box-shadow: 0px 3px 0px #dd6b44; }
   .header-carousel__text-link::after {
     position: absolute;
     content: "";
@@ -1348,16 +1368,6 @@ input, button, a {
     border-left: 5px solid white;
     transform: translate(0, -50%);
     transition: border-top 0.4s ease-in-out; }
-  .header-carousel__text-link::before {
-    position: absolute;
-    content: "";
-    bottom: -3px;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: #dd6b44;
-    z-index: -1;
-    transition: all 0.4s linear; }
   @media (min-width: 1000px) {
     .header-carousel__text-link {
       font-size: 16px; } }
@@ -1975,10 +1985,10 @@ input, button, a {
       width: 220px;
       max-width: 220px; } }
 
-.shop__card:hover .shop__card-img-svg {
+.shop__card-img:hover .shop__card-img-svg {
   transform: translate(-50%, -50%) scale(1); }
 
-.shop__card:hover .shop__card-img img {
+.shop__card-img:hover img {
   transform: scale(1.1); }
 
 .shop__card-img {
@@ -1986,7 +1996,8 @@ input, button, a {
   display: block;
   height: 360px;
   max-height: 360px;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all 0.4s linear; }
   @media (min-width: 768px) {
     .shop__card-img {
       height: 290px;
@@ -2076,18 +2087,11 @@ input, button, a {
   color: white;
   text-transform: uppercase;
   line-height: 1;
-  padding: 23px 32px 23px 10px;
+  padding: 23px 32px 20px 10px;
   background-color: #fd926d;
   text-decoration: none;
+  box-shadow: 0px 7px 0px #dd6b44;
   z-index: 4; }
-  .shop__card-btn::after {
-    position: absolute;
-    content: "";
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    height: 7px;
-    background-color: #dd6b44; }
   .shop__card-btn::before {
     position: absolute;
     content: "";
@@ -2102,9 +2106,8 @@ input, button, a {
     .shop__card-btn {
       font-size: 12px;
       width: auto;
-      padding: 10px 32px 10px 10px; }
-      .shop__card-btn::after {
-        height: 3px; } }
+      padding: 10px 32px 10px 10px;
+      box-shadow: 0px 3px 0px #dd6b44; } }
 
 .shop__card-btn:hover::before {
   width: 100%; }
@@ -2238,7 +2241,7 @@ input, button, a {
     content: "";
     top: 50%;
     right: 45px;
-    transform: translateY(-25%);
+    transform: translateY(-15%);
     border-top: 15px solid #fff;
     border-bottom: 15px solid transparent;
     border-left: 15px solid transparent;
@@ -3159,3 +3162,11 @@ input, button, a {
 
 #product-btn-gift {
   background-color: #fd926d; }
+
+@keyframes show-header {
+  0% {
+    opacity: 0;
+    top: -110px; }
+  100% {
+    opacity: 1;
+    top: 0; } }

@@ -1,3 +1,26 @@
+header {
+  position: sticky;
+  z-index: 200;
+  min-height: 200px;
+
+  @media (min-width: 1000px) {
+    min-height: 135px;
+  }
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: show-header 1s linear;
+  box-shadow: 0 0 2px 1px rgb(102, 102, 102);
+}
+
 .nav-panel {
   background-color: rgb(0, 0, 0);
 }

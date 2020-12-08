@@ -90,3 +90,19 @@ moneyDropdownBtnItem.forEach(function(item) {
     })
 })
 
+window.onscroll = function showHeader() {
+    const header = document.querySelector('.header-wrapper');
+    if (window.innerWidth > 768 & window.innerWidth < 1000) {
+        if (window.pageYOffset > 200) {
+            header.classList.add('header--fixed');
+        } else {
+            header.classList.remove('header--fixed');
+        }
+    } else if (window.innerWidth > 1000) {
+        if (window.pageYOffset > 135) {
+            header.classList.add('header--fixed');
+        } else {
+            header.classList.remove('header--fixed');
+        }
+    }
+}

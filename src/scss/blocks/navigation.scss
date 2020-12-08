@@ -253,7 +253,7 @@
 
 .navigation__mobile {
   position: relative;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
 
   @media (min-width: 1000px) {
     display: none;
