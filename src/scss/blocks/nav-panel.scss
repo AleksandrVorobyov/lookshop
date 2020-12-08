@@ -124,40 +124,20 @@
     background-color: $peach;
   }
 
-  &:first-child {
-    border-left: none;
-  }
-
-  &:last-child {
-    border-right: none;
-  }
-
   @media (min-width: 650px) {
     border-left: 1px solid #444444;
     border-right: 1px solid #444444;
     width: auto;
-
-    &:nth-child(2) {
-      border: none;
-    }
   }
 
   @media (min-width: 768px) {
     font-size: 11px;
     height: 30px;
-
-    &:first-child {
-      border-left: 1px solid #444444;
-    }
-
-    &:last-child {
-      border-right: 1px solid #444444;
-    }
   }
 }
 
 .nav-panel__btn--currency {
-  padding-right: 30px;
+  padding-right: 45px;
   padding-left: 30px;
 
   &::after {
