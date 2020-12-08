@@ -35,24 +35,27 @@ window.onload = function () {
 };
 
 const moreBtnMobile = document.querySelector('#mobile-more-btn');
-const allMobileShopCard = document.querySelector('.shop-mobile__cards');
-const MobileShopCard = allMobileShopCard.querySelectorAll('.shop__card');
 
-moreBtnMobile.addEventListener('click', function() {
-    MobileShopCard.forEach(function(item) {
-        item.classList.remove('hidden');
+if (moreBtnMobile != null) {
+    const allMobileShopCard = document.querySelector('.shop-mobile__cards');
+    moreBtnMobile.addEventListener('click', function() {
+        const MobileShopCard = allMobileShopCard.querySelectorAll('.shop__card');
+        MobileShopCard.forEach(function(item) {
+            item.classList.remove('hidden');
+        })
     })
-})
+}
 
 const moreBtnSale = document.querySelector('#sale-btn-more');
-const allSaleShopCard = document.querySelector('.sale__cards-wrap');
-const SaleShopCard = allSaleShopCard.querySelectorAll('.shop__card');
-
-moreBtnSale.addEventListener('click', function() {
-    SaleShopCard.forEach(function(item) {
-        item.style.display='block';
+if (moreBtnSale != null) {
+    const allSaleShopCard = document.querySelector('.sale__cards-wrap');
+    moreBtnSale.addEventListener('click', function() {
+        const SaleShopCard = allSaleShopCard.querySelectorAll('.shop__card');
+        SaleShopCard.forEach(function(item) {
+            item.style.display='block';
+        })
     })
-})
+}
 
 const profileBtn = document.querySelector('#nav-panel-profile');
 const profile = document.querySelector('.prifile');
