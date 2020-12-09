@@ -246,13 +246,19 @@
                 <button id="header-cart" class="navigation__cart-button">
                     Your cart
                 </button>
-                <a href="#" class="navigation__cart-desc">
-                    <span class="cart-desc__link"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
+                <div class="navigation__cart-desc">
+                    <a href="#" class="cart-desc__link"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
                     <div class="cart-desc__choice">
-                        <span class="cart-desc__choice-items">0 items</span>
-                        <span class="cart-desc__choice-price">$ 0</span>
+                        <div class="cart-desc__choice-row">
+                            <span id="cart-desc-sum" class="cart-desc__choice-price">0</span>
+                            <span class="cart-desc__choice-items">items</span>
+                        </div>
+                        <div class="cart-desc__choice-row">
+                            <span class="cart-desc__choice-price">$&ensp;</span>
+                            <span id="cart-desc-price" class="cart-desc__choice-price">0</span>
+                        </div>
                     </div>
-                </a>
+                </div>
             </form>
         </div>
     </div>

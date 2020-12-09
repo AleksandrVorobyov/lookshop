@@ -185,7 +185,6 @@
   width: 100%;
   padding: 0 30px;
   background-color: #fafafa;
-  cursor: pointer;
   transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
   text-decoration: none;
   outline: none;
@@ -204,6 +203,11 @@
     border-width: 1px;
     border-color: rgb(214, 214, 214);
   }
+}
+
+.cart-desc__choice-row {
+  display: inline-flex;
+  align-items: center;
 }
 
 .navigation__cart-button:hover ~ .navigation__cart-desc {
@@ -232,6 +236,7 @@
 .cart-desc__choice-items {
   position: relative;
   margin-right: 15px;
+  margin-left: 5px;
   color: rgb(148, 147, 147);
   text-transform: uppercase;
   line-height: 1.2;
@@ -239,7 +244,7 @@
   &::after {
     position: absolute;
     content: "|";
-    top: 0;
+    top: -1px;
     right: -10px;
     color: rgb(148, 147, 147);
   }

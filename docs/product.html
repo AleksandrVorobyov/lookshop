@@ -296,13 +296,19 @@
                                 <button id="header-cart" class="navigation__cart-button">
                                     Your cart
                                 </button>
-                                <a href="#" class="navigation__cart-desc">
-                                    <span class="cart-desc__link"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
+                                <div class="navigation__cart-desc">
+                                    <a href="#" class="cart-desc__link"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
                                     <div class="cart-desc__choice">
-                                        <span class="cart-desc__choice-items">0 items</span>
-                                        <span class="cart-desc__choice-price">$ 0</span>
+                                        <div class="cart-desc__choice-row">
+                                            <span id="cart-desc-sum" class="cart-desc__choice-price">0</span>
+                                            <span class="cart-desc__choice-items">items</span>
+                                        </div>
+                                        <div class="cart-desc__choice-row">
+                                            <span class="cart-desc__choice-price">$&ensp;</span>
+                                            <span id="cart-desc-price" class="cart-desc__choice-price">0</span>
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -472,11 +478,11 @@
                                 </div>
                                 <div class="product__info-block-btn">
                                     <div class="product__info-btn-row">
-                                        <button class="product__info-btn-item">-</button>
-                                        <button class="product__info-btn-item product__info-btn-item--text">1</button>
-                                        <button class="product__info-btn-item">+</button>
+                                        <button id="product-info-btn-min" class="product__info-btn-item">-</button>
+                                        <input type="text" id="product-info-btn-result" class="product__info-btn-item product__info-btn-item--text" value="1">
+                                        <button id="product-info-btn-max" class="product__info-btn-item">+</button>
                                     </div>
-                                    <a href="#" class="product__info-btn-link">add to cart</a>
+                                    <a href="#" class="product__info-btn-link"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -545,6 +551,11 @@
                     }]).getElement());
                 </script>
             </section>
+            
+            
+            
+            
+            
             
             <section class="related-products">
                 <h3 class="related-products__title">related products</h3>

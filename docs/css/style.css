@@ -532,7 +532,7 @@ body.lock {
 
 .btn-more {
     display: block;
-    padding: 20px 50px;
+    padding: 22px 50px 20px;
     font-size: 20px;
     font-family: "HelveticaNeueLTStd-Lt";
     color: white;
@@ -546,6 +546,33 @@ body.lock {
 
 input, button, a {
     -webkit-appearance: none !important;
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 200;
+    min-height: 200px;
+}
+
+@media (min-width: 1000px) {
+    header {
+        min-height: 135px;
+    }
+}
+
+.header-wrapper {
+    position: relative;
+}
+
+.header--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-animation: show-header 1s linear;
+    animation: show-header 1s linear;
+    box-shadow: 0 0 2px 1px #666666;
 }
 
 .nav-panel {
@@ -1130,7 +1157,7 @@ input, button, a {
 
 .navigation__mobile {
     position: relative;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 @media (min-width: 1000px) {
@@ -1770,6 +1797,7 @@ input, button, a {
     background-color: #ffa687;
     z-index: 1;
     transition: all 0.4s linear;
+    box-shadow: 0px 3px 0px #dd6b44;
 }
 
 .header-carousel__text-link::after {
@@ -1784,18 +1812,6 @@ input, button, a {
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     transition: border-top 0.4s ease-in-out;
-}
-
-.header-carousel__text-link::before {
-    position: absolute;
-    content: "";
-    bottom: -3px;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: #dd6b44;
-    z-index: -1;
-    transition: all 0.4s linear;
 }
 
 @media (min-width: 1000px) {
@@ -2691,12 +2707,12 @@ input, button, a {
     }
 }
 
-.shop__card:hover .shop__card-img-svg {
+.shop__card-img:hover .shop__card-img-svg {
     -webkit-transform: translate(-50%, -50%) scale(1);
     transform: translate(-50%, -50%) scale(1);
 }
 
-.shop__card:hover .shop__card-img img {
+.shop__card-img:hover img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
@@ -2707,6 +2723,7 @@ input, button, a {
     height: 360px;
     max-height: 360px;
     overflow: hidden;
+    transition: all 0.4s linear;
 }
 
 @media (min-width: 768px) {
@@ -2826,20 +2843,11 @@ input, button, a {
     color: white;
     text-transform: uppercase;
     line-height: 1;
-    padding: 23px 32px 23px 10px;
+    padding: 23px 32px 20px 10px;
     background-color: #fd926d;
     text-decoration: none;
+    box-shadow: 0px 7px 0px #dd6b44;
     z-index: 4;
-}
-
-.shop__card-btn::after {
-    position: absolute;
-    content: "";
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    height: 7px;
-    background-color: #dd6b44;
 }
 
 .shop__card-btn::before {
@@ -2859,10 +2867,7 @@ input, button, a {
         font-size: 12px;
         width: auto;
         padding: 10px 32px 10px 10px;
-    }
-
-    .shop__card-btn::after {
-        height: 3px;
+        box-shadow: 0px 3px 0px #dd6b44;
     }
 }
 
@@ -3033,8 +3038,8 @@ input, button, a {
     content: "";
     top: 50%;
     right: 45px;
-    -webkit-transform: translateY(-25%);
-    transform: translateY(-25%);
+    -webkit-transform: translateY(-15%);
+    transform: translateY(-15%);
     border-top: 15px solid #fff;
     border-bottom: 15px solid transparent;
     border-left: 15px solid transparent;
@@ -4340,4 +4345,28 @@ input, button, a {
 
 #product-btn-gift {
     background-color: #fd926d;
+}
+
+@-webkit-keyframes show-header {
+    0% {
+        opacity: 0;
+        top: -110px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes show-header {
+    0% {
+        opacity: 0;
+        top: -110px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
 }
