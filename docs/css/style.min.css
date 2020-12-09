@@ -496,6 +496,8 @@ header {
   width: 100%;
   animation: show-header 1s linear;
   box-shadow: 0 0 2px 1px #666666; }
+  .header--fixed .navigation__mobile {
+    display: none; }
 
 .nav-panel {
   background-color: black; }
@@ -3047,7 +3049,8 @@ header {
   background-color: #feb298;
   height: 50px;
   box-shadow: none;
-  text-align: center; }
+  text-align: center;
+  border-radius: 0px; }
 
 .product__info-btn-link {
   position: relative;

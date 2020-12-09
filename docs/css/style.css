@@ -681,6 +681,16 @@ header {
     }
 }
 
+.nav-panel__buttons div + div {
+    border-top: 1px solid #444444;
+}
+
+@media (min-width: 650px) {
+    .nav-panel__buttons div + div {
+        border-top: none;
+    }
+}
+
 .nav-panel__buttons button {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -1082,7 +1092,6 @@ header {
     width: 100%;
     padding: 0 30px;
     background-color: #fafafa;
-    cursor: pointer;
     transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
     text-decoration: none;
     outline: none;
@@ -1103,6 +1112,13 @@ header {
         border-width: 1px;
         border-color: #d6d6d6;
     }
+}
+
+.cart-desc__choice-row {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .navigation__cart-button:hover ~ .navigation__cart-desc {
@@ -1136,6 +1152,7 @@ header {
 .cart-desc__choice-items {
     position: relative;
     margin-right: 15px;
+    margin-left: 5px;
     color: #949393;
     text-transform: uppercase;
     line-height: 1.2;
@@ -1144,7 +1161,7 @@ header {
 .cart-desc__choice-items::after {
     position: absolute;
     content: "|";
-    top: 0;
+    top: -1px;
     right: -10px;
     color: #949393;
 }
@@ -2866,7 +2883,7 @@ header {
     .shop__card-btn {
         font-size: 12px;
         width: auto;
-        padding: 10px 32px 10px 10px;
+        padding: 12px 32px 10px 10px;
         box-shadow: 0px 3px 0px #dd6b44;
     }
 }
@@ -4176,6 +4193,7 @@ header {
     background-color: #feb298;
     height: 50px;
     box-shadow: none;
+    text-align: center;
 }
 
 .product__info-btn-link {
